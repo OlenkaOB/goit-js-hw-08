@@ -64,23 +64,28 @@ const images = [
   },
 ];
 
-const container = document.querySelector(".images");
+const gallery = document.querySelector(".gallery");
 
-container.insertAdjacentHTML("beforeend", galleryImages(images));
+gallery.insertAdjacentHTML("beforeend", galleryImages(images));
 
 function galleryImages(images) {
   return images
-    .map((image) => {
-      return `<li class="gallery-item>
-      <a class = "gallery-link" href = " ${images.original} ">
+    .map(({ preview, original, description }) => {
+      return `<li class="gallery-item">
+      <a class = "gallery-link" href = " ${original} ">
       <img class="gallery-image"
-      src="${images.preview}" 
-      data-source="${images.original}" 
-      alt="${images.description}"/>
+      src="${preview}" 
+      data-source="${original}" 
+      alt="${description}"/>
       </a>
       </li>`;
     })
     .join("");
 }
 
-container.addEventListener("click", onCardClick);
+gallery.addEventListener("click", onCardClick);
+function onCardClick(event) {
+  if (event.target === event.currentTarger) {
+    return;
+  }
+}

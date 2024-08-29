@@ -1,9 +1,18 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .gallery {
+  margin: 24px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .gallery-item {
   width: 360px;
-  padding: 24px;
-  margin: 24px;
 }
 .gallery-link {
 }
