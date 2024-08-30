@@ -15,7 +15,8 @@ ul {
 }
 
 .gallery {
-  margin: 24px;
+  margin: 24px 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -23,13 +24,25 @@ ul {
 }
 
 .gallery-item {
-  width: 360px;
+  list-style-type: none;
+  flex-basis: calc((100% - 48px) / 3);
+  box-sizing: border-box;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  transition: 0.9s ease;
 }
 
 .gallery-image {
-  width: 360px;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .modal {
   padding: 20px;
   user-select: none;
