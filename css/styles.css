@@ -11,9 +11,11 @@ ul {
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .gallery-item {
   width: 360px;
 }
+
 .gallery-link {
 }
 .gallery-image {

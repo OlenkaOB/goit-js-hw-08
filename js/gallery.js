@@ -85,7 +85,14 @@ function galleryImages(images) {
 
 gallery.addEventListener("click", onCardClick);
 function onCardClick(event) {
+  event.preventDefault();
   if (event.target === event.currentTarger) {
     return;
   }
+  const currentEl = event.target.closest(".gallery-item");
+
+  const instance = basicLightbox.create(`
+	<img src="${event.target.dataset.source}" width="1112" height="640"/>
+`);
+  instance.show();
 }
