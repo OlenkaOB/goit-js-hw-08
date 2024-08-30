@@ -92,7 +92,8 @@ function onCardClick(event) {
   const currentEl = event.target.closest(".gallery-item");
 
   const instance = basicLightbox.create(`
-	<img src="${event.target.dataset.source}" width="1112" height="640"/>
+    <div class = "modal">
+	<img src="${event.target.dataset.source}" width="1112" height="640"/></div>
 `);
   instance.show();
 }

@@ -1,3 +1,13 @@
+body {
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -16,9 +26,15 @@ ul {
   width: 360px;
 }
 
-.gallery-link {
-}
 .gallery-image {
   width: 360px;
   height: 200px;
+}
+.modal {
+  padding: 20px;
+  user-select: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
